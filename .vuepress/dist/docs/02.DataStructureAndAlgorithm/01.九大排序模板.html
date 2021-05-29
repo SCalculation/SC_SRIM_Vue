@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>九大排序代码模板</title>
+    <meta name="generator" content="VuePress 1.8.0">
+    
+    <meta name="description" content="">
+    
+    <link rel="preload" href="/assets/css/0.styles.4ea2240c.css" as="style"><link rel="preload" href="/assets/js/app.4d8cdabb.js" as="script"><link rel="preload" href="/assets/js/2.aba94b91.js" as="script"><link rel="preload" href="/assets/js/14.05c381db.js" as="script"><link rel="prefetch" href="/assets/js/10.48a425d0.js"><link rel="prefetch" href="/assets/js/11.3180bd3e.js"><link rel="prefetch" href="/assets/js/12.4bdc200d.js"><link rel="prefetch" href="/assets/js/13.500d59f4.js"><link rel="prefetch" href="/assets/js/15.b7ab9aaf.js"><link rel="prefetch" href="/assets/js/16.c1865be7.js"><link rel="prefetch" href="/assets/js/17.4328284c.js"><link rel="prefetch" href="/assets/js/18.26376ed8.js"><link rel="prefetch" href="/assets/js/19.b811a378.js"><link rel="prefetch" href="/assets/js/20.24238ebd.js"><link rel="prefetch" href="/assets/js/21.e9c17333.js"><link rel="prefetch" href="/assets/js/22.f8b87e46.js"><link rel="prefetch" href="/assets/js/23.e39ebe51.js"><link rel="prefetch" href="/assets/js/24.7ffee410.js"><link rel="prefetch" href="/assets/js/25.bb4fbb4a.js"><link rel="prefetch" href="/assets/js/26.b71ce4b2.js"><link rel="prefetch" href="/assets/js/27.c7e2e32e.js"><link rel="prefetch" href="/assets/js/28.d34c28f0.js"><link rel="prefetch" href="/assets/js/29.b6300507.js"><link rel="prefetch" href="/assets/js/3.32a694a7.js"><link rel="prefetch" href="/assets/js/4.7bdcc49c.js"><link rel="prefetch" href="/assets/js/5.b8b1293a.js"><link rel="prefetch" href="/assets/js/6.637a4b58.js"><link rel="prefetch" href="/assets/js/7.046a1bcd.js"><link rel="prefetch" href="/assets/js/8.5f0d8730.js"><link rel="prefetch" href="/assets/js/9.4e8d7d1e.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.4ea2240c.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container no-sidebar"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <!----></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><!---->  <!----> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="九大排序代码模板"><a href="#九大排序代码模板" class="header-anchor">#</a> 九大排序代码模板</h1> <h2 id="_01-手撕快速排序"><a href="#_01-手撕快速排序" class="header-anchor">#</a> 01.手撕快速排序</h2> <h2 id="_02-手撕归并排序"><a href="#_02-手撕归并排序" class="header-anchor">#</a> 02.手撕归并排序</h2> <h2 id="_03-手撕冒泡排序"><a href="#_03-手撕冒泡排序" class="header-anchor">#</a> 03.手撕冒泡排序</h2> <h2 id="_04-选择排序"><a href="#_04-选择排序" class="header-anchor">#</a> 04.选择排序</h2> <h3 id="_1-选择排序『数组版』模板"><a href="#_1-选择排序『数组版』模板" class="header-anchor">#</a> （1）选择排序『数组版』模板</h3> <p><a href="https://www.nowcoder.com/questionTerminal/5048367d2e934a14a933c9c5ba398632" target="_blank" rel="noopener noreferrer">牛客网-选择<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></p> <div class="language-cpp extra-class"><pre class="language-cpp"><code><span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span><span class="token string">&lt;bits/stdc++.h&gt;</span></span>
+<span class="token keyword">using</span> <span class="token keyword">namespace</span> std<span class="token punctuation">;</span>
+
+<span class="token keyword">static</span> <span class="token keyword">const</span> <span class="token keyword">int</span> maxn<span class="token operator">=</span><span class="token number">1e3</span><span class="token operator">+</span><span class="token number">5</span><span class="token punctuation">;</span>
+<span class="token keyword">int</span> n<span class="token punctuation">;</span>
+<span class="token keyword">int</span> solve<span class="token punctuation">[</span>maxn<span class="token punctuation">]</span><span class="token punctuation">;</span>
+
+<span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+	<span class="token keyword">while</span><span class="token punctuation">(</span> <span class="token operator">~</span><span class="token function">scanf</span><span class="token punctuation">(</span><span class="token string">&quot;%d&quot;</span><span class="token punctuation">,</span><span class="token operator">&amp;</span>n<span class="token punctuation">)</span> <span class="token punctuation">)</span>
+	<span class="token punctuation">{</span>
+		<span class="token keyword">int</span> loop<span class="token operator">=</span>n<span class="token punctuation">;</span>
+		<span class="token keyword">while</span><span class="token punctuation">(</span> loop<span class="token operator">--</span> <span class="token punctuation">)</span>
+		<span class="token punctuation">{</span>
+			<span class="token function">scanf</span><span class="token punctuation">(</span><span class="token string">&quot;%d&quot;</span><span class="token punctuation">,</span><span class="token operator">&amp;</span>solve<span class="token punctuation">[</span>loop<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+		<span class="token punctuation">}</span>
+		<span class="token comment">//*************************************************************</span>
+		<span class="token keyword">int</span> minLocation<span class="token punctuation">;</span><span class="token comment">//指向最小的数字</span>
+		<span class="token keyword">int</span> cur<span class="token punctuation">;</span><span class="token comment">//指向当前需要被swap的位置</span>
+		<span class="token keyword">for</span><span class="token punctuation">(</span>cur<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">;</span> cur<span class="token operator">&lt;</span>n<span class="token punctuation">;</span> <span class="token operator">++</span>cur<span class="token punctuation">)</span>
+		<span class="token punctuation">{</span>
+			minLocation<span class="token operator">=</span>cur<span class="token punctuation">;</span>
+			<span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">int</span> i<span class="token operator">=</span>cur<span class="token punctuation">;</span> i<span class="token operator">&lt;</span>n<span class="token punctuation">;</span> <span class="token operator">++</span>i<span class="token punctuation">)</span>
+			<span class="token punctuation">{</span>
+				<span class="token keyword">if</span><span class="token punctuation">(</span> solve<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token operator">&lt;</span>solve<span class="token punctuation">[</span>minLocation<span class="token punctuation">]</span> <span class="token punctuation">)</span>
+				<span class="token punctuation">{</span>
+					minLocation<span class="token operator">=</span>i<span class="token punctuation">;</span>
+				<span class="token punctuation">}</span><span class="token comment">//#end if</span>
+			<span class="token punctuation">}</span><span class="token comment">//#end inner for</span>
+
+			<span class="token function">swap</span><span class="token punctuation">(</span> solve<span class="token punctuation">[</span>cur<span class="token punctuation">]</span><span class="token punctuation">,</span> solve<span class="token punctuation">[</span>minLocation<span class="token punctuation">]</span> <span class="token punctuation">)</span><span class="token punctuation">;</span>
+		<span class="token punctuation">}</span>
+		<span class="token comment">//*************************************************************</span>
+		<span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">int</span> i<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">;</span> i<span class="token operator">&lt;</span>n<span class="token punctuation">;</span> <span class="token operator">++</span>i<span class="token punctuation">)</span>
+		<span class="token punctuation">{</span>
+			<span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">&quot;%d%c&quot;</span><span class="token punctuation">,</span> solve<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token punctuation">(</span>i<span class="token operator">==</span>n<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token operator">?</span> <span class="token string">'\n'</span> <span class="token operator">:</span> <span class="token string">' '</span> <span class="token punctuation">)</span><span class="token punctuation">;</span>
+		<span class="token punctuation">}</span>
+	<span class="token punctuation">}</span>
+
+	<span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h3 id="_2-『链表』版"><a href="#_2-『链表』版" class="header-anchor">#</a> （2）『链表』版</h3> <p><a href="https://www.nowcoder.com/practice/f23604257af94d939848729b1a5cda08?tpId=190&amp;&amp;tqId=35599&amp;rp=1&amp;ru=/activity/oj&amp;qru=/ta/job-code-high-rd/question-ranking" target="_blank" rel="noopener noreferrer">单链表的排序<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></p> <p>Leet上<a href="https://leetcode-cn.com/problems/sort-list/submissions/" target="_blank" rel="noopener noreferrer">排序链表<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></p> <p><strong>1、不断链之——狸猫换太子版</strong></p> <ul><li>牛客和LeetCode上都会超时，但思路OK</li></ul> <div class="language-cpp extra-class"><pre class="language-cpp"><code><span class="token comment">/**
+ * struct ListNode {
+ *	int val;
+ *	struct ListNode *next;
+ * };
+ */</span>
+
+<span class="token keyword">void</span> <span class="token function">swap</span><span class="token punctuation">(</span> ListNode <span class="token operator">*</span> a<span class="token punctuation">,</span> ListNode <span class="token operator">*</span> b<span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+    <span class="token keyword">int</span> temp<span class="token operator">=</span>a<span class="token operator">-&gt;</span>val<span class="token punctuation">;</span>
+    a<span class="token operator">-&gt;</span>val<span class="token operator">=</span>b<span class="token operator">-&gt;</span>val<span class="token punctuation">;</span>
+    b<span class="token operator">-&gt;</span>val<span class="token operator">=</span>temp<span class="token punctuation">;</span>
+    
+    <span class="token comment">//a-&gt;val^=b-&gt;val;  //由于『优先级』，这样写是错误的，要写成 (a-&gt;val)^=(b-&gt;val)这样的</span>
+    <span class="token comment">//b-&gt;val^=a-&gt;val;</span>
+    <span class="token comment">//a-&gt;val^=b-&gt;val;</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">class</span> <span class="token class-name">Solution</span> <span class="token punctuation">{</span>
+<span class="token keyword">public</span><span class="token operator">:</span>
+    <span class="token comment">/**
+     * 
+     * @param head ListNode类 the head node
+     * @return ListNode类
+     */</span>
+    ListNode<span class="token operator">*</span> <span class="token function">sortInList</span><span class="token punctuation">(</span>ListNode<span class="token operator">*</span> head<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token comment">// write code here</span>
+        
+        
+        <span class="token comment">//****************************************************************************</span>
+        ListNode <span class="token operator">*</span> cur<span class="token operator">=</span>head<span class="token punctuation">;</span>
+        
+        <span class="token keyword">while</span><span class="token punctuation">(</span> <span class="token keyword">nullptr</span><span class="token operator">!=</span>cur <span class="token punctuation">)</span>
+        <span class="token punctuation">{</span>
+            ListNode <span class="token operator">*</span> mintemp<span class="token operator">=</span>cur<span class="token punctuation">;</span>
+            ListNode <span class="token operator">*</span> inner<span class="token operator">=</span>cur<span class="token punctuation">;</span>
+            
+            <span class="token keyword">while</span><span class="token punctuation">(</span> <span class="token keyword">nullptr</span><span class="token operator">!=</span>inner <span class="token punctuation">)</span>
+            <span class="token punctuation">{</span>
+                <span class="token keyword">if</span><span class="token punctuation">(</span> inner<span class="token operator">-&gt;</span>val <span class="token operator">&lt;</span> mintemp<span class="token operator">-&gt;</span>val <span class="token punctuation">)</span>
+                <span class="token punctuation">{</span>
+                    mintemp<span class="token operator">=</span>inner<span class="token punctuation">;</span>
+                <span class="token punctuation">}</span>
+                
+                inner<span class="token operator">=</span>inner<span class="token operator">-&gt;</span>next<span class="token punctuation">;</span><span class="token comment">//for inner loop</span>
+            <span class="token punctuation">}</span>
+            <span class="token function">swap</span><span class="token punctuation">(</span> mintemp<span class="token punctuation">,</span> cur <span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment">//简化代码</span>
+            
+            cur<span class="token operator">=</span>cur<span class="token operator">-&gt;</span>next<span class="token punctuation">;</span><span class="token comment">//for outside loop</span>
+        <span class="token punctuation">}</span>
+        <span class="token comment">//****************************************************************************</span>
+        
+        <span class="token keyword">return</span> head<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+</code></pre></div><p><strong>（2）断链</strong></p> <h2 id="_05-插入排序"><a href="#_05-插入排序" class="header-anchor">#</a> 05.插入排序</h2></div> <footer class="page-edit"><!----> <!----></footer> <!----> </main></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.4d8cdabb.js" defer></script><script src="/assets/js/2.aba94b91.js" defer></script><script src="/assets/js/14.05c381db.js" defer></script>
+  </body>
+</html>
